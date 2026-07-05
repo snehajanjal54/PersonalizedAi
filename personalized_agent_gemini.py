@@ -7,7 +7,7 @@ import os
 import streamlit as st
 import google.generativeai as genai
 from dotenv import load_dotenv
-
+import google.generativeai as genai
 # ---------------------------
 # 0. LOAD API KEY FROM .env
 # ---------------------------
