@@ -7,13 +7,12 @@ import os
 import streamlit as st
 import google.generativeai as genai
 from dotenv import load_dotenv
-import google.generativeai as genai
 
 # ---------------------------
 # 0. LOAD API KEY FROM .env
 # ---------------------------
 load_dotenv()
-api_key = os.getenv("GOOGLE_API_KEY")
+api_key = st.secrets.get("GOOGLE_API_KEY") or os.getenv("GOOGLE_API_KEY") 
 
 # ---------------------------
 # 1. ROLE-BASED SYSTEM PROMPTS
